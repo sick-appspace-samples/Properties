@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="Properties">
+        <crown name="Properties">
+            <desc>user script</desc>
+            <serves/>
+        </crown>
+        <crown name="Address" builtin="true">
+            <desc>Address book entry</desc>
+            <serves>
+                <function name="create">
+                    <desc>Creates an object</desc>
+                    <return name="obj" type="object" alias="Address" desc="The instance"/>
+                </function>
+                <function name="setFirstName">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <param name="arg" type="string" desc="First name"/>
+                </function>
+                <function name="getFirstName">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="arg" type="string" desc="First name"/>
+                </function>
+                <function name="setLastName">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <param name="arg" type="string" desc="Last name"/>
+                </function>
+                <function name="getLastName">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="arg" type="string" desc="Last name"/>
+                </function>
+                <function name="setStreet">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <param name="arg" type="string" desc="Street"/>
+                </function>
+                <function name="getStreet">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="arg" type="string" desc="Street"/>
+                </function>
+                <function name="setZip">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <param name="arg" type="int" desc="Postal Code"/>
+                </function>
+                <function name="getZip">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="arg" type="int" desc="Postal Code"/>
+                </function>
+                <function name="setCity">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <param name="arg" type="string" desc="City"/>
+                </function>
+                <function name="getCity">
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="arg" type="string" desc="City"/>
+                </function>
+                <function name="toString">
+                    <desc>Creates an string representation</desc>
+                    <param name="obj" type="object" alias="Address" desc="The instance"/>
+                    <return name="s" type="string" desc="the string"/>
+                </function>
+            </serves>
+        </crown>
+        <crown name="AddressBook">
+            <desc>No description yet...</desc>
+            <serves>
+                <event name="OnAddressAdded">
+                    <desc>No description yet...</desc>
+                    <param name="address" type="object" alias="Address" desc="No description yet..."/>
+                </event>
+                <function name="add">
+                    <desc>No description yet...</desc>
+                    <param name="address" type="object" alias="Address" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="licensed">false</meta>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="priority">low</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="tags">Serves</meta>
+        <entry path="scripts" default="AddressBook.lua">
+            <file type="text/x-lua">AddressBook.lua</file>
+            <file type="text/x-lua">AddressBookClient.lua</file>
+        </entry>
+    </application>
+</manifest>
