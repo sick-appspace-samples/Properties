@@ -4,15 +4,14 @@
   address book.
 ------------------------------------------------------------------------------]]
 
--- Event handler for the "OnAddressAdded" event
---@displayAddedAddress(addr:Address)
+---Event handler for the "OnAddressAdded" event
+---@param addr Address
 local function displayAddedAddress(addr)
   print('New address added: ' .. addr:toString())
 end
 Script.register('AddressBook.OnAddressAdded', displayAddedAddress)
 
--- Client functionality. Add two addresses; the AddressBook will then raise
--- an event two times, which will trigger the event handler "displayAddedAddress".
+---Client functionality. Add two addresses; the AddressBook will then raise an event two times, which will trigger the event handler "displayAddedAddress".
 local function executeClient()
   local addr1 = Address.create()
   addr1:setFirstName('Johann Sebastian')
@@ -31,7 +30,7 @@ local function executeClient()
   AddressBook.add(addr2)
 end
 
--- Return local function to be used in Address book script
+---Return local function to be used in Address book script
 local fnc = {}
 fnc.executeClient = executeClient
 return fnc

@@ -1,7 +1,9 @@
 ## Properties
+
 Introduction to creating CROWN data structures with Properties for handling complex data.
 
 ### Description
+
 In this sample a new data type, called "Address", is declared via App Properties dialog.
 This data type has "Properties", which are basically a pair of get()/set()-Functions
 which are automatically implemented at declaration point. The set() function stores
@@ -12,9 +14,11 @@ address book, where "Address" data items can be stored (a Lua list of Address it
 The file "AddressBookClient.lua" then uses the AddressBook as client to add some
 Address instances and to print them out.
 
-### HOw To Run:
+### HOw To Run
+
 The app can be run with any AppSpace device or the emulator.
 The results of the program logic will be printed to the console.
 
 ### Topics
-Programming-Pattern, Sample, SICK-AppSpace
+
+programming-pattern, sample, sick-appspace
